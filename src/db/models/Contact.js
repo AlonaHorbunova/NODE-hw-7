@@ -1,23 +1,28 @@
 import { DataTypes } from "sequelize";
-
 import sequelize from "../sequelize.js";
 
-const Contact = sequelize.define("contact", {
-  fullname: {
-    type: DataTypes.STRING,
-    allowNull: false,
+const Contact = sequelize.define(
+  "Contact",
+  {
+    fullname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
-  phone: {
-    type: DataTypes.STRING,
-    allowNull: false,
+  {
+    tableName: "contacts",
   },
-  category: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
-});
+);
 
-Contact.sync({ alter: true });
+//Contact.sync({ alter: true });
 
 //await Contact.create({ fullname: "Ivasik Telesik", phone: "+1234567890",});
 
