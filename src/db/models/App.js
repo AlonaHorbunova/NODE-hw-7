@@ -19,8 +19,8 @@ const App = sequelize.define(
     },
   },
   {
-    tableName: "Apps", // Явно указываем имя таблицы
-    timestamps: false, // Отключаем createdAt и updatedAt
+    tableName: "Apps",
+    timestamps: false,
   },
 );
 

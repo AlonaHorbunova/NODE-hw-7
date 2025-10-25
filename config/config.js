@@ -1,8 +1,6 @@
 import "dotenv/config";
 
-// Заменяем module.exports на export default
 export default {
-  // Настройки для ЛОКАЛЬНОЙ (разрабатывающей) среды
   development: {
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
@@ -11,7 +9,6 @@ export default {
     dialect: process.env.DATABASE_DIALECT,
     port: process.env.DATABASE_PORT,
 
-    // Настройки для SSL
     dialectOptions: {
       ssl:
         process.env.DATEBASE_DIALECT_OPTIONS_SSL === "true"
@@ -23,7 +20,6 @@ export default {
     },
   },
 
-  // Настройки для ТЕСТИРОВАНИЯ
   test: {
     username: "root",
     password: null,
@@ -32,7 +28,6 @@ export default {
     dialect: "mysql",
   },
 
-  // Настройки для ПРОДАКШН
   production: {
     username: process.env.DATABASE_USER_CLOUD,
     password: process.env.DATABASE_PASSWORD_CLOUD,
@@ -41,7 +36,6 @@ export default {
     dialect: process.env.DATABASE_DIALECT_CLOUD,
     port: process.env.DATABASE_PORT_CLOUD,
 
-    // Настройки для SSL
     dialectOptions: {
       ssl:
         process.env.DATEBASE_DIALECT_OPTIONS_SSL_CLOUD === "true"
