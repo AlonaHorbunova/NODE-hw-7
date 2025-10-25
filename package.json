@@ -8,7 +8,9 @@
     "dev": "nodemon src/index.js",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
-    "format": "prettier --write src/**/*.js"
+    "format": "prettier --write src/**/*.js",
+    "db:migrate": "npx sequelize-cli db:migrate --migrations-path ./src/db/migrations --config ./config/config.js",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo --migrations-path ./src/db/migrations --config ./config/config.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,8 @@
     "eslint": "^9.37.0",
     "globals": "^16.4.0",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "sequelize-cli": "^6.6.3"
   },
   "dependencies": {
     "cors": "^2.8.5",

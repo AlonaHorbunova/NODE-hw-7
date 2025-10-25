@@ -1,0 +1,9 @@
+const path = require('path');
+
+module.exports = {
+  // Указываем CLI, где искать папку с миграциями
+  'migrations-path': path.resolve(__dirname, 'db', 'migrations'),
+  
+  // Указываем CLI, где находится его конфигурационный файл
+  'config': path.resolve(__dirname, 'config', 'config.js'), 
+};
