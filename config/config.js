@@ -11,7 +11,7 @@ export default {
 
     dialectOptions: {
       ssl:
-        process.env.DATEBASE_DIALECT_OPTIONS_SSL === "true"
+        process.env.DATABASE_DIALECT_OPTIONS_SSL === "true"
           ? {
               require: true,
               rejectUnauthorized: false,
@@ -38,7 +38,7 @@ export default {
 
     dialectOptions: {
       ssl:
-        process.env.DATEBASE_DIALECT_OPTIONS_SSL_CLOUD === "true"
+        process.env.DATABASE_DIALECT_OPTIONS_SSL_CLOUD === "true"
           ? {
               require: true,
               rejectUnauthorized: false,
